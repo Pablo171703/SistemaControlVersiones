@@ -22,7 +22,14 @@ public class ControlVersiones {
 		double perimetroC = calcularPerimetroCircunf(radioC);
 		System.out.println("El área de la circunferencia es: " + areaC);
 		System.out.println("El perímetro de la circunferencia es: " + perimetroC);
-
+		
+		// Cilindro:
+		System.out.println("Introduce radio");
+		int radioCil = in.nextInt();
+		System.out.println("Introduce altura");
+		int alturaCil = in.nextInt();
+		double areaCil = calcularAreaCilindro(radioCil, alturaCil);
+		System.out.println("El área del Cilindrro es: " + areaCil);		
 
 	}
 	public static double calcularAreaTriangulo(int base, int altura) {
@@ -35,5 +42,9 @@ public class ControlVersiones {
 
 	public static double calcularPerimetroCircunf(int radio) {
 		return 2 * Math.PI * radio;
+	}
+	
+	public static double calcularAreaCilindro(int radio, int altura) {
+		return 2 * Math.PI * radio * (altura + radio);
 	}
 }
